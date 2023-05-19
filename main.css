@@ -1,0 +1,83 @@
+*{    margin: 0;    padding: 0;    transition: .2s ease-in-out;}
+@font-face {    font-family:Tanha ;    src: url(fonts/eot/Tanha-FD.eot),
+    url(fonts/ttf/Tanha-FD.eot),    url(fonts/woff/Tanha-FD.woff),
+    url(fonts/woff2/Tanha-FD.woff2);
+}
+@font-face {    font-family:Vazir ;    src: url(fonts/eot/Vazir-Bold.eot),
+    url(fonts/ttf/Vazir-Bold.ttf),    url(fonts/woff/Vazir-Bold.woff),
+    url(fonts/woff2/Vazir-Bold.woff2);
+}
+:root{    --font-primatry:Tanha;    --font-secondary:Vazir;    --color-primary:#7322a6;
+    --color-primary-dark:#08001b;    --color-black:#000;    --color-white:#fff;
+}
+body{    width: 100%;    font-family: var(--font-secondary);
+     background-color: var(--color-primary-dark); color: white;
+    }
+header{ height: 70px; width: 100%;   display: flex;  justify-content: space-between;}
+header nav{width: 60%;    display: flex; flex-direction: row-reverse;    align-items: center; margin-top: 30px;
+        justify-content: space-between;}
+header nav .logo{    width: 100px;overflow: hidden; margin-left: 20px;}
+header nav .logo img{    width: 100%;}
+header nav ul{    display: flex;    justify-content: space-around;    list-style: none;}
+header nav ul li{    margin-right: 40px;    font-family: var(--font-primatry);
+    padding: 5px 10px;    position: relative;   color: rgb(207, 207, 207);
+}
+header nav ul li.select{    color: white;    position: relative;}
+header nav ul li.select::after{    content: '';    width: 7px;    height: 7px;
+    background-color: #fff;    position: absolute;    border-radius: 100%;
+    left: calc( 50% - 5px);    bottom: -10px;
+}
+main{    width: 100%;}
+.LandingPage{width: 100%;    height: 100vh;    display: flex;    flex-direction: column;
+    justify-content: space-between;    align-items: center;    position: absolute;
+    top: 0;    z-index: -1;
+}
+.LandingPage .img-content{    display: flex;    height: 100%;    justify-content: center;
+    width: 100%;    z-index: 0;     overflow: hidden; position: relative;
+}
+.LandingPage .img-content::before{    content: '';    position: absolute;    width: 100%;
+    height: 100%;    background-color: rgba(0,0,0,.5); top: 0;left: 0;
+}
+.LandingPage .img-content img{   height: 100%; width: 100%;}
+.LandingPage .content{    display: flex;    flex-direction: column;    z-index: 1;
+    justify-content: space-between;    width: 90%;    height: 100%;    position: absolute;
+    bottom: 10px;
+}
+.LandingPage .content .top{    width: 100%;}
+.LandingPage .content .top h1{    width: 100%; font-size: 34pt; display: flex; 
+     justify-content: space-between; margin-top: 150px;
+}
+.LandingPage .content .bottom{   width: 100%; display: flex; justify-content: space-around;}
+.LandingPage .content .bottom .items{    display: flex;    flex-direction: column;
+    align-items: center;    width: 20%;    justify-content: center;
+    background-color: rgba(255, 255, 255, .4);    color: #000;    border-radius: 10px;
+}
+.LandingPage .content .bottom .items .img-container{    display: flex;
+    flex-direction: column;    align-items: center;    position: relative;
+}
+.LandingPage .content .bottom .items .img-container img{    width: 100px;    height: 100px;
+    top: -30px;    border-radius: 100%;    position: absolute;
+    box-shadow: 4px 4px 10px rgb(59 59 59);
+}
+.LandingPage .content .bottom .items .img-container .title{    margin-top: 70px;}
+.LandingPage .content .bottom .items .img-container .title h3{    font-size: 20pt;}
+.LandingPage .content .bottom .items .img-container .title p{    color: rgb(46, 46, 46);
+    margin-bottom: 5px;
+}
+.LandingPage .content .bottom .items .text-content{    display: flex;    flex-direction: row;
+    justify-content: space-between;    width: 100%;
+    background-color: rgba(82, 82, 82, 0.5);    padding: 10px 0;
+}
+.LandingPage .content .bottom .items .text-content .portion,
+.LandingPage .content .bottom .items .text-content .price{
+    display: flex;    flex-direction: column;    width: 49%;    align-items: flex-start;
+    height: 100%;    justify-content: space-between;
+}
+.LandingPage .content .bottom .items .text-content .portion{    padding-right: 5px;}
+.LandingPage .content .bottom .items .text-content .price{    align-items: flex-end;
+    padding-left: 5px;
+}
+.LandingPage .content .bottom .items .text-content .portion span:nth-child(1)
+,.LandingPage .content .bottom .items .text-content .price span:nth-child(1){
+    color: rgba(255, 255, 255, .4);    font-size: 9pt;    margin-bottom: 20px;
+}
